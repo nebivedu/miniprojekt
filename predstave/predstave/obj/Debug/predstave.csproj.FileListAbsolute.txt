@@ -1,0 +1,10 @@
+C:\Users\gapig\Source\Repos\nebivedu\miniprojekt\predstave\predstave\bin\Debug\predstave.exe.config
+C:\Users\gapig\Source\Repos\nebivedu\miniprojekt\predstave\predstave\bin\Debug\predstave.exe
+C:\Users\gapig\Source\Repos\nebivedu\miniprojekt\predstave\predstave\bin\Debug\predstave.pdb
+C:\Users\gapig\Source\Repos\nebivedu\miniprojekt\predstave\predstave\obj\Debug\predstave.csprojAssemblyReference.cache
+C:\Users\gapig\Source\Repos\nebivedu\miniprojekt\predstave\predstave\obj\Debug\predstave.Form1.resources
+C:\Users\gapig\Source\Repos\nebivedu\miniprojekt\predstave\predstave\obj\Debug\predstave.Properties.Resources.resources
+C:\Users\gapig\Source\Repos\nebivedu\miniprojekt\predstave\predstave\obj\Debug\predstave.csproj.GenerateResource.cache
+C:\Users\gapig\Source\Repos\nebivedu\miniprojekt\predstave\predstave\obj\Debug\predstave.csproj.CoreCompileInputs.cache
+C:\Users\gapig\Source\Repos\nebivedu\miniprojekt\predstave\predstave\obj\Debug\predstave.exe
+C:\Users\gapig\Source\Repos\nebivedu\miniprojekt\predstave\predstave\obj\Debug\predstave.pdb
