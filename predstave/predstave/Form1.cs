@@ -39,10 +39,35 @@ namespace predstave
                 con.Close();
             }
         }
+        public void imep()
+        {
+            using (NpgsqlConnection con = new NpgsqlConnection(connect))
+            {
+                con.Open();
+
+                NpgsqlCommand com = new NpgsqlCommand("SELECT ime FROM predstave", con);
+                NpgsqlDataReader reader = com.ExecuteReader();
+                while (reader.Read())
+                {
+                    string ime = reader.GetString(0);
+                    label1.Text = ime;
+                    label2.Text= ime;
+                }
+
+
+                con.Close();
+            }
+        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             lol();
+            imep();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
