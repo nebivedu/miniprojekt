@@ -75,6 +75,7 @@ namespace predstave
             
             form2.Show();
             
+            
         }
     }
 }
