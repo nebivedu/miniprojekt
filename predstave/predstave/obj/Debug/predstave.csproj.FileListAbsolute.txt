@@ -31,3 +31,5 @@ C:\Users\gapig\Source\Repos\nebivedu\miniprojekt\predstave\predstave\bin\Debug\S
 C:\Users\gapig\Source\Repos\nebivedu\miniprojekt\predstave\predstave\obj\Debug\predstave.csproj.CopyComplete
 C:\Users\gapig\Source\Repos\nebivedu\miniprojekt\predstave\predstave\obj\Debug\predstave.exe
 C:\Users\gapig\Source\Repos\nebivedu\miniprojekt\predstave\predstave\obj\Debug\predstave.pdb
+C:\Users\gapig\Source\Repos\nebivedu\miniprojekt\predstave\predstave\obj\Debug\predstave.Form2.resources
+C:\Users\gapig\Source\Repos\nebivedu\miniprojekt\predstave\predstave\obj\Debug\predstave.Form3.resources

@@ -43,15 +43,18 @@ namespace predstave
         {
             using (NpgsqlConnection con = new NpgsqlConnection(connect))
             {
+                List<string> list = new List<string>();
                 con.Open();
 
                 NpgsqlCommand com = new NpgsqlCommand("SELECT ime FROM predstave", con);
                 NpgsqlDataReader reader = com.ExecuteReader();
                 while (reader.Read())
                 {
+                    
                     string ime = reader.GetString(0);
+                    string izpis = ime ;
+                    list.Add(izpis);
                     label1.Text = ime;
-                    label2.Text= ime;
                 }
 
 
@@ -67,7 +70,11 @@ namespace predstave
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            
+            Form2 form2 = new Form2();
+            
+            form2.Show();
+            
         }
     }
 }
