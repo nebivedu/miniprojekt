@@ -25,9 +25,16 @@ namespace predstave
         private void button1_Click(object sender, EventArgs e)
         {
             Form3 form3 = new Form3();
-
+            this.Hide();
             form3.Show();
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            prijava form4 = new prijava();
+            this.Hide();
+            form4.Show();
         }
     }
 }

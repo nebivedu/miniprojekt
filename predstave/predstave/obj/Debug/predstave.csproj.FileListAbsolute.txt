@@ -33,3 +33,4 @@ C:\Users\gapig\Source\Repos\nebivedu\miniprojekt\predstave\predstave\obj\Debug\p
 C:\Users\gapig\Source\Repos\nebivedu\miniprojekt\predstave\predstave\obj\Debug\predstave.pdb
 C:\Users\gapig\Source\Repos\nebivedu\miniprojekt\predstave\predstave\obj\Debug\predstave.Form2.resources
 C:\Users\gapig\Source\Repos\nebivedu\miniprojekt\predstave\predstave\obj\Debug\predstave.Form3.resources
+C:\Users\gapig\Source\Repos\nebivedu\miniprojekt\predstave\predstave\obj\Debug\predstave.prijava.resources

@@ -99,7 +99,7 @@ namespace predstave
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(385, 321);
+            this.ClientSize = new System.Drawing.Size(266, 237);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form3";
             this.Text = "Form3";
