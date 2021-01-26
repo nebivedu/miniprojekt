@@ -23,13 +23,30 @@ namespace predstave
         {
             using (NpgsqlConnection con = new NpgsqlConnection(connect))
             {
+                int dela = 0;
+                bool lep = false;
+                {
 
-                con.Open();
+                    con.Open();
 
-                NpgsqlCommand com = new NpgsqlCommand("SELECT prijava('" + email.Text + "','" + geslo.Text + "')", con);
-                com.ExecuteNonQuery();
+                    NpgsqlCommand com = new NpgsqlCommand("SELECT prijava('" + email.Text + "','" + geslo.Text + "')", con);
+                    NpgsqlDataReader reader = com.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        dela = reader.GetInt32(0);
+                    }
 
-                con.Close();
+
+                    if (dela == 1)
+                    {
+                        lep =true;
+                    }
+                    else
+                    {
+                        lep= false;
+                    }
+                    con.Close();
+                }
             }
         }
     }

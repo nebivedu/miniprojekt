@@ -50,11 +50,11 @@ namespace predstave
                 NpgsqlDataReader reader = com.ExecuteReader();
                 while (reader.Read())
                 {
-                    
                     string ime = reader.GetString(0);
                     string izpis = ime ;
                     list.Add(izpis);
-                    label1.Text = ime;
+                    listBox1.Items.Add(ime);
+
                 }
 
 
@@ -76,6 +76,13 @@ namespace predstave
             form2.Show();
             
             
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string id = listBox1.SelectedIndex.ToString();
+            BazaConn baza = new BazaConn();
+
         }
     }
 }
