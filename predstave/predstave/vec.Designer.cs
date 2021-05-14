@@ -29,73 +29,96 @@ namespace predstave
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.Ime = new System.Windows.Forms.Label();
+            this.Zvrst = new System.Windows.Forms.Label();
+            this.Datum = new System.Windows.Forms.Label();
+            this.Opis = new System.Windows.Forms.Label();
+            this.Lokacija = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.Kraj = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label1
+            // Ime
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(47, 66);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 29);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
+            this.Ime.AutoSize = true;
+            this.Ime.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Ime.Location = new System.Drawing.Point(47, 66);
+            this.Ime.Name = "Ime";
+            this.Ime.Size = new System.Drawing.Size(79, 29);
+            this.Ime.TabIndex = 0;
+            this.Ime.Text = "label1";
             // 
-            // label2
+            // Zvrst
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(47, 126);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 29);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "label2";
+            this.Zvrst.AutoSize = true;
+            this.Zvrst.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Zvrst.Location = new System.Drawing.Point(47, 126);
+            this.Zvrst.Name = "Zvrst";
+            this.Zvrst.Size = new System.Drawing.Size(79, 29);
+            this.Zvrst.TabIndex = 1;
+            this.Zvrst.Text = "label2";
             // 
-            // label3
+            // Datum
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(47, 193);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 29);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "label3";
+            this.Datum.AutoSize = true;
+            this.Datum.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Datum.Location = new System.Drawing.Point(47, 193);
+            this.Datum.Name = "Datum";
+            this.Datum.Size = new System.Drawing.Size(79, 29);
+            this.Datum.TabIndex = 3;
+            this.Datum.Text = "label3";
             // 
-            // label4
+            // Opis
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(47, 256);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 29);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "label4";
+            this.Opis.AutoSize = true;
+            this.Opis.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Opis.Location = new System.Drawing.Point(47, 256);
+            this.Opis.Name = "Opis";
+            this.Opis.Size = new System.Drawing.Size(79, 29);
+            this.Opis.TabIndex = 2;
+            this.Opis.Text = "label4";
             // 
-            // label5
+            // Lokacija
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(47, 314);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(79, 29);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "label5";
+            this.Lokacija.AutoSize = true;
+            this.Lokacija.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lokacija.Location = new System.Drawing.Point(47, 314);
+            this.Lokacija.Name = "Lokacija";
+            this.Lokacija.Size = new System.Drawing.Size(79, 29);
+            this.Lokacija.TabIndex = 4;
+            this.Lokacija.Text = "label5";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(241, 88);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // Kraj
+            // 
+            this.Kraj.AutoSize = true;
+            this.Kraj.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Kraj.Location = new System.Drawing.Point(47, 367);
+            this.Kraj.Name = "Kraj";
+            this.Kraj.Size = new System.Drawing.Size(79, 29);
+            this.Kraj.TabIndex = 6;
+            this.Kraj.Text = "label6";
             // 
             // vec
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1231, 619);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.Kraj);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Lokacija);
+            this.Controls.Add(this.Datum);
+            this.Controls.Add(this.Opis);
+            this.Controls.Add(this.Zvrst);
+            this.Controls.Add(this.Ime);
             this.Name = "vec";
             this.Text = "vec";
             this.Load += new System.EventHandler(this.vec_Load);
@@ -106,10 +129,12 @@ namespace predstave
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label Ime;
+        private System.Windows.Forms.Label Zvrst;
+        private System.Windows.Forms.Label Datum;
+        private System.Windows.Forms.Label Opis;
+        private System.Windows.Forms.Label Lokacija;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label Kraj;
     }
 }

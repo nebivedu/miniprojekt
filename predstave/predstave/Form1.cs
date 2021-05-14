@@ -70,7 +70,7 @@ namespace predstave
             foreach (predstava i in predstava)
             {
 
-                datapredstave.Rows.Add(new object[] { i.Id, i.Ime, i.Zvrst, i.Datum, i.Opis, i.Lokacija, "Več"});
+                datapredstave.Rows.Add(new object[] { i.Id, i.Ime, i.Zvrst, i.Datum, i.Opis, i.Lokacija, i.Kraj, "Več" });
                 
 
             }
@@ -105,7 +105,7 @@ namespace predstave
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 6)
+            if (e.ColumnIndex == 7)
             {
                 int id = Convert.ToInt32(datapredstave.Rows[e.RowIndex].Cells[0].Value);
                
@@ -120,7 +120,18 @@ namespace predstave
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            string kraj = comboBox1.SelectedItem.ToString();
+            MessageBox.Show(kraj);
+            datapredstave.Rows.Clear();
+            bazasql Baza = new bazasql();
+            List<predstava> predstava = Baza.krajpredstave(kraj);
+            
+            foreach (predstava i in predstava)
+            {
 
+                datapredstave.Rows.Add(new object[] { i.Id, i.Ime, i.Zvrst, i.Datum, i.Opis, i.Lokacija, i.Kraj, "Več" });
+
+            }
         }
     }
 }

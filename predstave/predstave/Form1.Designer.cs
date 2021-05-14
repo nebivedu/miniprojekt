@@ -34,14 +34,17 @@ namespace predstave
             this.button1 = new System.Windows.Forms.Button();
             this.datapredstave = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Zvrst = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Datum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Opis = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Lokacija = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Kraj = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vec = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.datapredstave)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,7 +57,7 @@ namespace predstave
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(997, 100);
+            this.comboBox1.Location = new System.Drawing.Point(932, 126);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 2;
@@ -83,6 +86,7 @@ namespace predstave
             this.Datum,
             this.Opis,
             this.Lokacija,
+            this.Kraj,
             this.vec});
             this.datapredstave.Location = new System.Drawing.Point(30, 100);
             this.datapredstave.Name = "datapredstave";
@@ -99,6 +103,15 @@ namespace predstave
             this.label1.Size = new System.Drawing.Size(109, 25);
             this.label1.TabIndex = 6;
             this.label1.Text = "Predstave";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(953, 107);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(73, 13);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Uredi po kraju";
             // 
             // Id
             // 
@@ -137,26 +150,41 @@ namespace predstave
             this.Lokacija.Name = "Lokacija";
             this.Lokacija.ReadOnly = true;
             // 
+            // Kraj
+            // 
+            this.Kraj.HeaderText = "Kraj";
+            this.Kraj.Name = "Kraj";
+            this.Kraj.ReadOnly = true;
+            // 
             // vec
             // 
             this.vec.HeaderText = "Več";
             this.vec.Name = "vec";
             this.vec.ReadOnly = true;
             // 
-            // label2
+            // textBox1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(1018, 81);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 13);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Uredi po kraju";
+            this.textBox1.Location = new System.Drawing.Point(78, 74);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 8;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(184, 74);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 9;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1151, 544);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.datapredstave);
@@ -178,14 +206,17 @@ namespace predstave
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView datapredstave;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ime;
         private System.Windows.Forms.DataGridViewTextBoxColumn Zvrst;
         private System.Windows.Forms.DataGridViewTextBoxColumn Datum;
         private System.Windows.Forms.DataGridViewTextBoxColumn Opis;
         private System.Windows.Forms.DataGridViewTextBoxColumn Lokacija;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Kraj;
         private System.Windows.Forms.DataGridViewButtonColumn vec;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button2;
     }
 }
 

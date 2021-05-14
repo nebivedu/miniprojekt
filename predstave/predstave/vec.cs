@@ -28,11 +28,12 @@ namespace predstave
             foreach (predstava i in predstava)
             {
 
-                label1.Text = i.Ime;
-                label2.Text = i.Zvrst;
-                label3.Text = i.Opis;
-                label4.Text = i.Datum;
-                label5.Text = i.Kraj;
+                Ime.Text = i.Ime;
+                Zvrst.Text = i.Zvrst;
+                Datum.Text = i.Opis;
+                Opis.Text = i.Datum;
+                Lokacija.Text = i.Lokacija;
+                Kraj.Text = i.Kraj;
             }
         }
     }

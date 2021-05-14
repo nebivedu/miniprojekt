@@ -20,6 +20,7 @@ namespace predstave
 
         public predstava()
         {
+
         }
         public predstava(int id)
         {
