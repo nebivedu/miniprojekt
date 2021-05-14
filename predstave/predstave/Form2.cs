@@ -12,9 +12,13 @@ namespace predstave
 {
     public partial class Form2 : Form
     {
-        public Form2()
+        int Idu = 0;
+        int Prijavlen = 0;
+        public Form2(int idu,int prijavlen)
         {
             InitializeComponent();
+            Idu = idu;
+            Prijavlen = prijavlen;
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -24,8 +28,8 @@ namespace predstave
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form3 form3 = new Form3();
-            this.Hide();
+            registracija form3 = new registracija();
+            this.Close();
             form3.Show();
 
         }

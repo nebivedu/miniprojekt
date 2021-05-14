@@ -47,7 +47,7 @@ namespace predstave
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 29);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(234, 209);
+            this.groupBox1.Size = new System.Drawing.Size(239, 209);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             // 

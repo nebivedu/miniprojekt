@@ -14,6 +14,8 @@ namespace predstave
 {
     public partial class Form1 : Form
     {
+        public int idu = 0;
+        public int prijavlen = 0;
         public Form1()
         {
             InitializeComponent();
@@ -89,8 +91,8 @@ namespace predstave
         private void button1_Click(object sender, EventArgs e)
         {
             
-            Form2 form2 = new Form2();
-            this.Hide();
+            Form2 form2 = new Form2(idu,prijavlen);
+            
             form2.Show();
             
             

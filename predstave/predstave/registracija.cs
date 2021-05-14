@@ -12,11 +12,11 @@ using predstave;
 
 namespace predstave
 {
-    public partial class Form3 : Form
+    public partial class registracija : Form
     {
         
 
-        public Form3()
+        public registracija()
         {
             InitializeComponent();
         }
