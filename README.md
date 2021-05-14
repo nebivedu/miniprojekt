@@ -64,3 +64,47 @@ begin
 	WHERE k.ime=imek;
 
 end;$$
+
+create or replace function izpisvsehPredstav() 
+    returns table (
+        idu int,
+        ime VARCHAR,
+        zvrst VARCHAR,
+        datum VARCHAR,
+        opis TEXT,
+        lokacija VARCHAR,
+        kraj VARCHAR
+    ) 
+    language plpgsql
+as $$
+begin
+    return query 
+        SELECT 
+        p.id,p.ime,p.zvrst,p.datum,p.opis,l.ime,k.ime
+    FROM
+        predstave p INNER JOIN lokacije l ON l.id=p.likacija_id INNER JOIN kraji k ON k.id=l.kraj_id;
+
+
+end;$$
+
+create or replace function isciPredstavo(neki varchar) 
+	returns table (
+		idu int,
+        ime VARCHAR,
+        zvrst VARCHAR,
+        datum VARCHAR,
+        opis TEXT,
+		lokacija VARCHAR,
+		kraj VARCHAR
+	) 
+	language plpgsql
+as $$
+begin
+	return query 
+		SELECT 
+        p.id,p.ime,p.zvrst,p.datum,p.opis,l.ime,k.ime
+    FROM
+        predstave p INNER JOIN lokacije l ON l.id=p.likacija_id INNER JOIN kraji k ON k.id=l.kraj_id
+	WHERE LOWER(p.ime) LIKE neki OR LOWER(p.zvrst) LIKE neki OR LOWER(p.opis) LIKE neki  OR LOWER(l.ime) LIKE neki  OR LOWER(k.ime) LIKE neki;
+
+end;$$
