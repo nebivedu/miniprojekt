@@ -133,5 +133,30 @@ namespace predstave
 
             }
         }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            datapredstave.Rows.Clear();
+            bazasql Baza = new bazasql();
+            List<predstava> predstava = Baza.iscipredstavo(textBox1.Text);
+            foreach (predstava i in predstava)
+            {
+
+                datapredstave.Rows.Add(new object[] { i.Id, i.Ime, i.Zvrst, i.Datum, i.Opis, i.Lokacija, i.Kraj, "Več" });
+
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            datapredstave.Rows.Clear();
+            bazasql Baza = new bazasql();
+            List<predstava> predstava = Baza.Vsepredstave();
+
+            foreach (predstava i in predstava)
+            {
+                datapredstave.Rows.Add(new object[] { i.Id, i.Ime, i.Zvrst, i.Datum, i.Opis, i.Lokacija, i.Kraj, "Več" });
+            }
+        }
     }
 }
