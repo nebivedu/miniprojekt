@@ -63,41 +63,20 @@ namespace predstave
         }
         public void formload()
         {
-            datapredstave.Rows.Clear(); 
-            List<predstava> predstavas = itemsDatabase.Readknjige();
-            foreach (predstava i in predstavas)
-            {
-                string stat = "";
-                if (i.Status == 0)
-                {
-                    stat = "Izposojeno";
-                }
-                else
-                    stat = "Prosto";
+            datapredstave.Rows.Clear();
+            bazasql Baza = new bazasql();
+            List<predstava> predstava = Baza.Vsepredstave();
 
-                DataKnjige.Rows.Add(new object[] { i.Inventarna, i.Naslov, i.Avtor, i.Leto, i.Oddelek, i.Zalozba, "Izposodi", stat });
-                DataKnjige2.Rows.Add(new object[] { i.Inventarna, i.Naslov, i.Avtor, i.Leto, i.Oddelek, i.Zalozba, stat, "Uredi", "Izbriši" });
+            foreach (predstava i in predstava)
+            {
+
+                datapredstave.Rows.Add(new object[] { i.Id, i.Ime, i.Zvrst, i.Datum, i.Opis, i.Lokacija, "Več"});
+                
 
             }
-            for (int i = 0; i < DataKnjige.Rows.Count; i++)
-            {
-                string stat = Convert.ToString(DataKnjige.Rows[i].Cells[7].Value);
-                if (stat == "Izposojeno")
-                {
+            
 
-                    DataKnjige.Rows[i].Cells[7].Style.BackColor = Color.Red;
-                    DataKnjige2.Rows[i].Cells[6].Style.BackColor = Color.Red;
-                    //DataKnjige.Rows[i].Cells[6].Visible = true;
-                }
-                else if (stat == "Prosto")
-                {
-                    DataKnjige.Rows[i].Cells[7].Style.BackColor = Color.Green;
-                    DataKnjige2.Rows[i].Cells[6].Style.BackColor = Color.Green;
-                    //DataKnjige.Rows[i].Cells[6].ReadOnly = true;
-
-                }
-
-            }
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)

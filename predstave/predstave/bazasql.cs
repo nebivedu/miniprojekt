@@ -18,7 +18,7 @@ namespace predstave
             {
                 con.Open();
 
-                NpgsqlCommand com = new NpgsqlCommand("SELECT * FROM kraji", con);
+                NpgsqlCommand com = new NpgsqlCommand("SELECT p.id,p.ime,p.zvrst,p.datum,p.opis,l.ime FROM predstave p INNER JOIN lokacije l ON l.id=p.likacija_id", con);
                 NpgsqlDataReader reader = com.ExecuteReader();
                 while (reader.Read())
                 {
