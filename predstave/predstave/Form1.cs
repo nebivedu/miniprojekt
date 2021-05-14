@@ -107,9 +107,10 @@ namespace predstave
         {
             if (e.ColumnIndex == 6)
             {
-                
-                    vec pod = new vec();
-                    pod.ShowDialog();
+                int id = Convert.ToInt32(datapredstave.Rows[e.RowIndex].Cells[0].Value);
+               
+                vec pod = new vec(id);
+                pod.ShowDialog();
 
                 
                 
