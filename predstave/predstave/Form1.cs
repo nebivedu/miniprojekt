@@ -105,7 +105,16 @@ namespace predstave
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.ColumnIndex == 6)
+            {
+                
+                    vec pod = new vec();
+                    pod.ShowDialog();
 
+                
+                
+
+            }
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
