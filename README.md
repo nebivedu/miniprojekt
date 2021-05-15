@@ -131,3 +131,19 @@ begin
     WHERE email=emaill AND geslo=gesloo;
 
 end;$$
+
+create or replace function prijava1(emaill varchar,gesloo varchar) 
+    returns table (
+        idu int
+    ) 
+    language plpgsql
+as $$
+begin
+    return query 
+        SELECT 
+        u.id
+    FROM
+        uporabniki u 
+    WHERE email=emaill AND geslo=gesloo;
+
+end;$$
