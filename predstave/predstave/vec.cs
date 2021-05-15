@@ -53,8 +53,8 @@ namespace predstave
 
                 Ime.Text = i.Ime;
                 Zvrst.Text = i.Zvrst;
-                Datum.Text = i.Opis;
-                Opis.Text = i.Datum;
+                Datum.Text = i.Datum; 
+                opis.Text = i.Opis;
                 Lokacija.Text = i.Lokacija;
                 Kraj.Text = i.Kraj;
                 
@@ -67,6 +67,7 @@ namespace predstave
         {
             button3.Visible = false;
             comboBox1.Visible = false;
+            button4.Visible = false;
             lol();
             deli();
             if(Prijavlen>0)
@@ -80,6 +81,7 @@ namespace predstave
                 if (lol>0)
                 {
                     button1.Enabled = true;
+                    button4.Visible = true;
                 }
                 else
                 {
@@ -103,6 +105,7 @@ namespace predstave
             button2.Visible = true;
             button3.Visible = true;
             comboBox1.Visible = true;
+            button4.Visible = true;
             textBox5.Enabled = false; textBox4.Enabled = false;
 
             bazasql Baza = new bazasql();
@@ -131,6 +134,7 @@ namespace predstave
             if (Prijavlen > 0)
             {
                 button1.Visible = true;
+
             }
         }
 
@@ -142,6 +146,15 @@ namespace predstave
             MessageBox.Show(Idu.ToString());
             bazasql Baza = new bazasql();
             Baza.Insertocena(ocena,Id,Idu);
+            
+            
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            bazasql Baza = new bazasql();
+            Baza.deletepredstave(Id);
+            Baza.deleteocene(Id);
             
             
         }

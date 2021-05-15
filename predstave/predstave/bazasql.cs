@@ -294,5 +294,37 @@ namespace predstave
 
             }
         }
+        public void deletepredstave(int idp )
+        {
+
+            using (NpgsqlConnection con = new NpgsqlConnection(connect))
+            {
+                con.Open();
+
+                NpgsqlCommand com = new NpgsqlCommand("DELETE FROM ocene WHERE predstava_id=" + idp +"", con);
+                com.ExecuteNonQuery();
+
+
+
+                con.Close();
+
+            }
+        }
+        public void deleteocene(int idp)
+        {
+
+            using (NpgsqlConnection con = new NpgsqlConnection(connect))
+            {
+                con.Open();
+
+                NpgsqlCommand com = new NpgsqlCommand("DELETE FROM predstave p WHERE p.id=" + idp + "", con);
+                com.ExecuteNonQuery();
+
+
+
+                con.Close();
+
+            }
+        }
     }
 }
