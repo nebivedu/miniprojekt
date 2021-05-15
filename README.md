@@ -147,3 +147,20 @@ begin
     WHERE email=emaill AND geslo=gesloo;
 
 end;$$
+
+
+create or replace function emailselect(idu int) 
+    returns table (
+        email varchar
+    ) 
+    language plpgsql
+as $$
+begin
+    return query 
+        SELECT 
+        u.email
+    FROM
+        uporabniki u 
+    WHERE u.id=idu;
+
+end;$$
