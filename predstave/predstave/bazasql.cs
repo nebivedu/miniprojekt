@@ -263,14 +263,14 @@ namespace predstave
             {
                 con.Open();
 
-                NpgsqlCommand com = new NpgsqlCommand("SELECT * FROM ocenafilma3(" +id+ ") ", con);
+                NpgsqlCommand com = new NpgsqlCommand("SELECT * FROM avgocene(" + id+ ") ", con);
                 NpgsqlDataReader reader = com.ExecuteReader();
 
                 while (reader.Read())
                 {
-                    int Ocena = reader.GetInt32(0);
+                    double Ocena = reader.GetDouble(0);
                     
-                    predstava nova = new predstava(Ocena);
+                    predstava nova = new predstava(Convert.ToInt32(Ocena));
                     ocena1.Add(nova);
                     //MessageBox.Show(Ocena.ToString());
                 }
