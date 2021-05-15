@@ -212,3 +212,69 @@ begin
 	WHERE p.id=idp;
 
 end;$$
+
+
+create or replace function ocenafilma(idp int) 
+    returns table (
+        
+        ocena int
+        
+    ) 
+    language plpgsql
+as $$
+begin
+    return query 
+        SELECT 
+        o.ocena
+    FROM
+        predstave p INNER JOIN ocene o ON p.id=o.predstava_id 
+    WHERE p.id=idp;
+
+end;$$
+
+CREATE OR REPLACE FUNCTION Updateocena (ocena int, idu int,idp int)
+RETURNS void AS $$ DECLARE
+
+BEGIN
+
+UPDATE ocene SET predstava_id = idp WHERE uporabnik_id= idu;
+
+END; $$ LANGUAGE 'plpgsql';
+
+create or replace function ocenafilma5(idp int) 
+    returns table (
+        ocena float
+    ) 
+    language plpgsql
+as $$
+begin
+    return query 
+        SELECT 
+        AVG(o.ocena)
+    FROM
+        predstave p INNER JOIN ocene o ON p.id=o.predstava_id 
+    WHERE p.id=idp;
+
+end;$$
+
+CREATE OR REPLACE FUNCTION avgocene(idp int) 
+RETURNS float AS $$ 
+DECLARE avrg float; 
+BEGIN
+
+SELECT AVG(o.Ocena) INTO avrg FROM ocene o WHERE idp=predstava_id;
+RETURN avrg; 
+END; $$ LANGUAGE 'plpgsql';
+
+CREATE OR REPLACE FUNCTION avgocene(idp int) 
+RETURNS float AS $$ 
+DECLARE avrg float; 
+BEGIN
+
+SELECT AVG(o.Ocena) INTO avrg FROM ocene o WHERE idp=predstava_id;
+IF(avrg IS null)
+	THEN avrg=0;
+	END IF;
+RETURN avrg; 
+END;
+$$ LANGUAGE 'plpgsql';
