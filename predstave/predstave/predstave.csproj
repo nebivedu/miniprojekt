@@ -95,6 +95,12 @@
     <Compile Include="prijava_reg.Designer.cs">
       <DependentUpon>prijava_reg.cs</DependentUpon>
     </Compile>
+    <Compile Include="profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="profile.Designer.cs">
+      <DependentUpon>profile.cs</DependentUpon>
+    </Compile>
     <Compile Include="registracija.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="prijava_reg.resx">
       <DependentUpon>prijava_reg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="profile.resx">
+      <DependentUpon>profile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="registracija.resx">
       <DependentUpon>registracija.cs</DependentUpon>

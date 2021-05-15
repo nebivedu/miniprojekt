@@ -35,3 +35,4 @@ C:\Users\gapig\Source\Repos\nebivedu\miniprojekt\predstave\predstave\obj\Debug\p
 C:\Users\gapig\Source\Repos\nebivedu\miniprojekt\predstave\predstave\obj\Debug\predstave.vec.resources
 C:\Users\gapig\Source\Repos\nebivedu\miniprojekt\predstave\predstave\obj\Debug\predstave.registracija.resources
 C:\Users\gapig\Source\Repos\nebivedu\miniprojekt\predstave\predstave\obj\Debug\predstave.prijava_reg.resources
+C:\Users\gapig\Source\Repos\nebivedu\miniprojekt\predstave\predstave\obj\Debug\predstave.profile.resources

@@ -44,7 +44,7 @@ namespace predstave
             {
                 con.Open();
 
-                NpgsqlCommand com = new NpgsqlCommand("SELECT iduporabnika('" + email + "','" + geslo + "') ", con);
+                NpgsqlCommand com = new NpgsqlCommand("SELECT iduporabnika('" + email.Text + "','" + geslo.Text + "') ", con);
                 NpgsqlDataReader reader = com.ExecuteReader();
 
                 while (reader.Read())
@@ -57,7 +57,7 @@ namespace predstave
                 
             }
 
-            MessageBox.Show(Idu.ToString());
+            //MessageBox.Show(Idu.ToString());
             
             Prijavlen = 1;
             Form1 form1 = new Form1(Idu,Prijavlen);

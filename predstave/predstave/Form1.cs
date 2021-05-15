@@ -94,10 +94,19 @@ namespace predstave
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (Prijavlen > 0)
+            {
+                profile form2 = new profile(Idu, Prijavlen);
+                //this.Hide();
+                form2.ShowDialog();
+            }
+            else
+            {
+                prijava_reg form2 = new prijava_reg(Idu, Prijavlen);
+                this.Hide();
+                form2.Show();
+            }
             
-            prijava_reg form2 = new prijava_reg(Idu,Prijavlen);
-            
-            form2.Show();
             
             
         }

@@ -13,8 +13,12 @@ namespace predstave
 {
     public partial class prijava : Form
     {
-        public prijava()
+        public int Idu = 0;
+        public int Prijavlen = 0;
+        public prijava(int idu, int prijavlen)
         {
+            Idu = idu;
+            Prijavlen = prijavlen;
             InitializeComponent();
         }
         BazaConn baza = new BazaConn();

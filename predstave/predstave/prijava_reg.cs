@@ -36,7 +36,7 @@ namespace predstave
 
         private void button2_Click(object sender, EventArgs e)
         {
-            prijava form4 = new prijava();
+            prijava form4 = new prijava(Idu,Prijavlen);
             this.Hide();
             form4.Show();
         }
