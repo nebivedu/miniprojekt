@@ -287,3 +287,32 @@ DECLARE
 BEGIN DELETE FROM predstave p WHERE p.id=idp;
 
 END; $$ LANGUAGE 'plpgsql';
+
+
+CREATE OR REPLACE FUNCTION izbrisocene(idp int) 
+RETURNS void AS $$ 
+DECLARE
+
+BEGIN DELETE FROM ocene o WHERE predstava_id=idp;
+
+END; $$ LANGUAGE 'plpgsql';
+
+create or replace function izpisocenjenihuporanik(idu int) 
+	returns table (
+        ime VARCHAR,
+        zvrst VARCHAR,
+        lokacija VARCHAR,
+        kraj varchar,
+		ocena int
+	) 
+	language plpgsql
+as $$
+begin
+	return query 
+		SELECT p.ime,p.zvrst,l.ime,k.ime, o.ocena 
+		FROM predstave p INNER JOIN lokacije l ON l.id=p.likacija_id 
+		INNER JOIN kraji k ON k.id =l.kraj_id INNER JOIN ocene o ON p.id = o.predstava_id 
+		INNER JOIN uporabniki u ON u.id=o.uporabnik_id 
+		WHERE u.id=idu;
+
+end;$$
