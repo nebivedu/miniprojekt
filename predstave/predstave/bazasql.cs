@@ -134,5 +134,36 @@ namespace predstave
                 return uporabnik;
             }
         }
+        public bool Prijava(string emaill, string passwordd)
+        {
+            int dela = 0;
+            using (NpgsqlConnection con = new NpgsqlConnection(connect))
+            {
+
+                con.Open();
+
+                NpgsqlCommand com = new NpgsqlCommand("SELECT Prijava1('" + emaill + "','" + passwordd + "')", con);
+                NpgsqlDataReader reader = com.ExecuteReader();
+                if (reader.Read())
+                {
+                    dela = reader.GetInt32(0);
+                }
+
+
+                if (dela > 0)
+                {
+                    con.Close();
+                    return true;
+
+                }
+                else
+                {
+                    con.Close();
+                    return false;
+
+                }
+
+            }
+        }
     }
 }

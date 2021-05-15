@@ -25,32 +25,24 @@ namespace predstave
         string connect = BazaConn.connect();
         private void button1_Click(object sender, EventArgs e)
         {
-            using (NpgsqlConnection con = new NpgsqlConnection(connect))
+            bazasql bazaa = new bazasql();
+            string email1 = email.Text;
+            string password1 = geslo.Text;
+            bool dela = bazaa.Prijava(email1, password1);
+            if (dela == true)
             {
-                int dela = 0;
-                bool lep = false;
-                {
+                Prijavlen = 1;
+                Form1 lol1 = new Form1(Idu, Prijavlen);
+                lol1.Show();
+                this.Hide();
 
-                    con.Open();
+            }
+            else
+            {
+                MessageBox.Show("Prijava neuspešna");
+                email.Clear();
+                geslo.Clear();
 
-                    NpgsqlCommand com = new NpgsqlCommand("SELECT prijava('" + email.Text + "','" + geslo.Text + "')", con);
-                    NpgsqlDataReader reader = com.ExecuteReader();
-                    if (reader.Read())
-                    {
-                        dela = reader.GetInt32(0);
-                    }
-
-
-                    if (dela == 1)
-                    {
-                        lep =true;
-                    }
-                    else
-                    {
-                        lep= false;
-                    }
-                    con.Close();
-                }
             }
         }
     }
