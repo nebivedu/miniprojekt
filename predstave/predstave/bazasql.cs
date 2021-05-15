@@ -186,5 +186,21 @@ namespace predstave
                 return uporabnik;
             }
         }
+        public void Updatepredstave(int id, string ime, string zvrst, string datum, string opis)
+        {
+
+            using (NpgsqlConnection con = new NpgsqlConnection(connect))
+            {
+                con.Open();
+
+                NpgsqlCommand com = new NpgsqlCommand("SELECT Updatepredstave('" + id + "','" + zvrst + "','" + ime + "','" + datum + "', '" + opis + "')", con);
+                com.ExecuteNonQuery();
+
+
+
+                con.Close();
+
+            }
+        }
     }
 }

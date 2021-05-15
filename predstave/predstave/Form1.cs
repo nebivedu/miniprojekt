@@ -98,7 +98,8 @@ namespace predstave
             {
                 profile form2 = new profile(Idu, Prijavlen);
                 //this.Hide();
-                form2.ShowDialog();
+                form2.Show();
+                this.Close();
             }
             else
             {
@@ -124,7 +125,7 @@ namespace predstave
             {
                 int id = Convert.ToInt32(datapredstave.Rows[e.RowIndex].Cells[0].Value);
                
-                vec pod = new vec(id);
+                vec pod = new vec(id,Prijavlen);
                 pod.ShowDialog();
 
                 

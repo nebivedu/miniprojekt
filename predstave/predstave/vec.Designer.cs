@@ -36,6 +36,13 @@ namespace predstave
             this.Lokacija = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.Kraj = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.textBox5 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // Ime
@@ -96,6 +103,7 @@ namespace predstave
             this.button1.TabIndex = 5;
             this.button1.Text = "Uredi";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Kraj
             // 
@@ -107,11 +115,72 @@ namespace predstave
             this.Kraj.TabIndex = 6;
             this.Kraj.Text = "label6";
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(429, 75);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(120, 20);
+            this.textBox1.TabIndex = 7;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(429, 101);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(120, 20);
+            this.textBox2.TabIndex = 8;
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(429, 152);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(244, 191);
+            this.richTextBox1.TabIndex = 9;
+            this.richTextBox1.Text = "";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(429, 127);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(120, 20);
+            this.textBox3.TabIndex = 10;
+            // 
+            // textBox4
+            // 
+            this.textBox4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.textBox4.Location = new System.Drawing.Point(429, 349);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(120, 20);
+            this.textBox4.TabIndex = 11;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(598, 396);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 12;
+            this.button2.Text = "Ok";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(429, 376);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(120, 20);
+            this.textBox5.TabIndex = 13;
+            // 
             // vec
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1231, 619);
+            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.Kraj);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Lokacija);
@@ -136,5 +205,12 @@ namespace predstave
         private System.Windows.Forms.Label Lokacija;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label Kraj;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox textBox5;
     }
 }
