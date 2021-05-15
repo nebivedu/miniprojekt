@@ -147,3 +147,45 @@ begin
     WHERE email=emaill AND geslo=gesloo;
 
 end;$$
+
+
+create or replace function emailselect(idu int) 
+    returns table (
+        email varchar
+    ) 
+    language plpgsql
+as $$
+begin
+    return query 
+        SELECT 
+        u.email
+    FROM
+        uporabniki u 
+    WHERE u.id=idu;
+
+end;$$
+
+CREATE OR REPLACE FUNCTION Updatepredstave(idp int,imep varchar,zvrstp varchar,datump varchar,opisp varchar) 
+RETURNS void AS $$ DECLARE
+
+BEGIN
+
+UPDATE predstave SET ime=imep,zvrst=zvrstp,datum=datump,opis=opisp  WHERE id = idp;
+
+END; $$ LANGUAGE 'plpgsql';
+
+create or replace function adminvprasaj(idu int) 
+    returns table (
+        adminu int
+    ) 
+    language plpgsql
+as $$
+begin
+    return query 
+        SELECT 
+        u.adminu
+    FROM
+        uporabniki u 
+    WHERE u.id=idu;
+
+end;$$
