@@ -108,3 +108,26 @@ begin
 	WHERE LOWER(p.ime) LIKE neki OR LOWER(p.zvrst) LIKE neki OR LOWER(p.opis) LIKE neki  OR LOWER(l.ime) LIKE neki  OR LOWER(k.ime) LIKE neki;
 
 end;$$
+
+
+create or replace function registracija(emaill VARCHAR, gesloo VARCHAR)
+DECLARE
+BEGIN
+INSERT INTO uporabniki(email,geslo) VALUES(emaill,gesloo);
+END;
+
+create or replace function iduporabnika(emaill varchar,gesloo varchar) 
+    returns table (
+        idu int
+    ) 
+    language plpgsql
+as $$
+begin
+    return query 
+        SELECT 
+        u.id
+    FROM
+        uporabniki u 
+    WHERE email=emaill AND geslo=gesloo;
+
+end;$$
