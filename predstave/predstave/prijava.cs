@@ -31,6 +31,23 @@ namespace predstave
             bool dela = bazaa.Prijava(email1, password1);
             if (dela == true)
             {
+                using (NpgsqlConnection con = new NpgsqlConnection(connect))
+                {
+                    con.Open();
+
+                    NpgsqlCommand com = new NpgsqlCommand("SELECT iduporabnika('" + email.Text + "','" + geslo.Text + "') ", con);
+                    NpgsqlDataReader reader = com.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        int Id = reader.GetInt32(0);
+
+                        Idu = Id;
+                    }
+                    con.Close();
+
+                }
+                //MessageBox.Show(Idu.ToString());
                 Prijavlen = 1;
                 Form1 lol1 = new Form1(Idu, Prijavlen);
                 lol1.Show();
