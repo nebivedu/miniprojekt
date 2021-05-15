@@ -125,7 +125,7 @@ namespace predstave
             {
                 int id = Convert.ToInt32(datapredstave.Rows[e.RowIndex].Cells[0].Value);
                
-                vec pod = new vec(id,Prijavlen);
+                vec pod = new vec(id,Prijavlen,Idu);
                 pod.ShowDialog();
 
                 

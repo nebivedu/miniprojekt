@@ -14,11 +14,13 @@ namespace predstave
     {
         int Id;
         int Prijavlen= 0;
-        public vec(int id, int prijavlen)
+        int Idu = 0;
+        public vec(int id, int prijavlen,int idu)
         {
             InitializeComponent();
             Id = id;
             Prijavlen = prijavlen;
+            Idu = idu;
         }
         public void lol()
         {
@@ -52,6 +54,17 @@ namespace predstave
             if(Prijavlen>0)
             {
                 button1.Visible = true;
+                bazasql Baza = new bazasql();
+                int lol = Baza.admin(Idu);
+                //MessageBox.Show(lol.ToString());
+                if (lol>0)
+                {
+                    button1.Enabled = true;
+                }
+                else
+                {
+                    button1.Enabled = false;
+                }
             }
 
             

@@ -202,5 +202,25 @@ namespace predstave
 
             }
         }
+        public int admin(int idu)
+        {
+            int uporabnik = 0;
+            using (NpgsqlConnection con = new NpgsqlConnection(connect))
+            {
+                con.Open();
+
+                NpgsqlCommand com = new NpgsqlCommand("SELECT * FROM adminvprasaj(" + idu + ")", con);
+                NpgsqlDataReader reader = com.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    int id = reader.GetInt32(0);
+
+                    uporabnik = id;
+                }
+                con.Close();
+                return uporabnik;
+            }
+        }
     }
 }

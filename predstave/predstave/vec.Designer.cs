@@ -97,7 +97,7 @@ namespace predstave
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(256, 73);
+            this.button1.Location = new System.Drawing.Point(319, 73);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 5;
