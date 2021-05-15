@@ -173,3 +173,19 @@ BEGIN
 UPDATE predstave SET ime=imep,zvrst=zvrstp,datum=datump,opis=opisp  WHERE id = idp;
 
 END; $$ LANGUAGE 'plpgsql';
+
+create or replace function adminvprasaj(idu int) 
+    returns table (
+        adminu int
+    ) 
+    language plpgsql
+as $$
+begin
+    return query 
+        SELECT 
+        u.adminu
+    FROM
+        uporabniki u 
+    WHERE u.id=idu;
+
+end;$$
