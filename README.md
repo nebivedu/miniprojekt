@@ -278,3 +278,12 @@ IF(avrg IS null)
 RETURN avrg; 
 END;
 $$ LANGUAGE 'plpgsql';
+
+
+CREATE OR REPLACE FUNCTION izbrispredstave(idp int) 
+RETURNS void AS $$ 
+DECLARE
+
+BEGIN DELETE FROM predstave p WHERE p.id=idp;
+
+END; $$ LANGUAGE 'plpgsql';
