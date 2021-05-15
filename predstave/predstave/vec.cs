@@ -22,6 +22,17 @@ namespace predstave
             Prijavlen = prijavlen;
             Idu = idu;
         }
+        public void deli()
+        {
+            bazasql Baza = new bazasql();
+            List<predstava> ocena1 = Baza.filmocena(Id);
+            foreach (predstava i in ocena1)
+            {
+
+                ocenalabel.Text = i.Id.ToString();
+
+            }
+        }
         public void lol()
         {
             button1.Visible = false;
@@ -45,13 +56,16 @@ namespace predstave
                 Opis.Text = i.Datum;
                 Lokacija.Text = i.Lokacija;
                 Kraj.Text = i.Kraj;
-                ocena.Text="Ocena "+i.Ocena+"/5";
+                
             }
+            MessageBox.Show(Id.ToString());
+            
         }
 
         private void vec_Load(object sender, EventArgs e)
         {
             lol();
+            deli();
             if(Prijavlen>0)
             {
                 button1.Visible = true;
@@ -67,12 +81,14 @@ namespace predstave
                     button1.Enabled = false;
                 }
             }
-
             
+
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
             textBox1.Visible = true;
             textBox2.Visible = true;
             textBox3.Visible = true;

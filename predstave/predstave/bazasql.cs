@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Npgsql;
+using System.Windows.Forms;
 
 namespace predstave
 {
@@ -43,7 +44,7 @@ namespace predstave
             {
                 con.Open();
 
-                NpgsqlCommand com = new NpgsqlCommand("SELECT * FROM izpisPredstavid1("+id+") ", con);
+                NpgsqlCommand com = new NpgsqlCommand("SELECT * FROM izpisPredstavid(" + id+") ", con);
                 NpgsqlDataReader reader = com.ExecuteReader();
                 while (reader.Read())
                 {
@@ -54,8 +55,8 @@ namespace predstave
                     string Opis = reader.GetString(4);
                     string Lokacija = reader.GetString(5);
                     string Kraj = reader.GetString(6);
-                    int Ocena = reader.GetInt32(7);
-                    predstava nova = new predstava(Id, Ime, Zvrst, Datum, Opis, Lokacija,Kraj,Ocena);
+                    
+                    predstava nova = new predstava(Id, Ime, Zvrst, Datum, Opis, Lokacija,Kraj);
                     predstave.Add(nova);
                 }
                 con.Close();
@@ -253,6 +254,28 @@ namespace predstave
 
                 con.Close();
 
+            }
+        }
+        public List<predstava> filmocena(int id)
+        {
+            List<predstava> ocena1 = new List<predstava>();
+            using (NpgsqlConnection con = new NpgsqlConnection(connect))
+            {
+                con.Open();
+
+                NpgsqlCommand com = new NpgsqlCommand("SELECT * FROM ocenafilma1(" +id+ ") ", con);
+                NpgsqlDataReader reader = com.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    int Ocena = reader.GetInt32(0);
+                    
+                    predstava nova = new predstava(Ocena);
+                    ocena1.Add(nova);
+                    MessageBox.Show(Ocena.ToString());
+                }
+                con.Close();
+                return ocena1;
             }
         }
     }
