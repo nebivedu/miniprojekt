@@ -272,10 +272,26 @@ namespace predstave
                     
                     predstava nova = new predstava(Ocena);
                     ocena1.Add(nova);
-                    MessageBox.Show(Ocena.ToString());
+                    //MessageBox.Show(Ocena.ToString());
                 }
                 con.Close();
                 return ocena1;
+            }
+        }
+        public void Insertocena(int ocena, int idp,int idu)
+        {
+
+            using (NpgsqlConnection con = new NpgsqlConnection(connect))
+            {
+                con.Open();
+                int lol = idp;
+                NpgsqlCommand com = new NpgsqlCommand("INSERT INTO ocene(ocena, predstava_id, uporabnik_id) VALUES("+ocena+","+idp+","+idu+");", con);
+                    com.ExecuteNonQuery();
+
+
+
+                con.Close();
+
             }
         }
     }

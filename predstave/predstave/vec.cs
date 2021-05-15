@@ -29,7 +29,7 @@ namespace predstave
             foreach (predstava i in ocena1)
             {
 
-                ocenalabel.Text = i.Id.ToString();
+                ocenalabel.Text ="Ocena: "+ i.Id.ToString();
 
             }
         }
@@ -43,6 +43,7 @@ namespace predstave
             textBox5.Visible = false;
             richTextBox1.Visible = false;
             button2.Visible = false;
+            
             textBox5.Enabled = false; textBox4.Enabled = false;
             bazasql Baza = new bazasql();
             List<predstava> predstava = Baza.idpredstave(Id);
@@ -58,16 +59,20 @@ namespace predstave
                 Kraj.Text = i.Kraj;
                 
             }
-            MessageBox.Show(Id.ToString());
+            
             
         }
 
         private void vec_Load(object sender, EventArgs e)
         {
+            button3.Visible = false;
+            comboBox1.Visible = false;
             lol();
             deli();
             if(Prijavlen>0)
             {
+                button3.Visible = true;
+                comboBox1.Visible = true;
                 button1.Visible = true;
                 bazasql Baza = new bazasql();
                 int lol = Baza.admin(Idu);
@@ -96,6 +101,8 @@ namespace predstave
             textBox5.Visible = true;
             richTextBox1.Visible = true;
             button2.Visible = true;
+            button3.Visible = true;
+            comboBox1.Visible = true;
             textBox5.Enabled = false; textBox4.Enabled = false;
 
             bazasql Baza = new bazasql();
@@ -125,6 +132,18 @@ namespace predstave
             {
                 button1.Visible = true;
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            int ocena = comboBox1.SelectedIndex+1;
+            MessageBox.Show(ocena.ToString());
+            MessageBox.Show(Id.ToString());
+            MessageBox.Show(Idu.ToString());
+            bazasql Baza = new bazasql();
+            Baza.Insertocena(ocena,Id,Idu);
+            
+            
         }
     }
 }
