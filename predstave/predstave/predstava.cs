@@ -60,8 +60,19 @@ namespace predstave
 
 
         }
-        
-        
+        public predstava(string ime, string zvrst,string lokacija,string kraj,int ocena)
+        {
+
+            
+            Ime = ime;
+            Zvrst = zvrst;
+            
+            Lokacija = lokacija;
+            Kraj = kraj;
+            Ocena = ocena;
+
+        }
+
         public override string ToString()
         {
             string vstring = Id + Ime + Zvrst + Datum + Opis + Lokacija;

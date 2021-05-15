@@ -35,7 +35,7 @@ namespace predstave
 
                 NpgsqlCommand com = new NpgsqlCommand("SELECT registracija('" + email.Text + "','" + geslo.Text + "')", con);
                 com.ExecuteNonQuery();
-
+                Prijavlen = 1;
                 con.Close();
             }
 

@@ -37,7 +37,6 @@ namespace predstave
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Zvrst = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Lokacija = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Kraj = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ocena = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
@@ -99,7 +98,6 @@ namespace predstave
             this.Id,
             this.Ime,
             this.Zvrst,
-            this.Lokacija,
             this.Kraj,
             this.ocena});
             this.datapredstave.Location = new System.Drawing.Point(286, 40);
@@ -125,12 +123,6 @@ namespace predstave
             this.Zvrst.HeaderText = "Zvrst";
             this.Zvrst.Name = "Zvrst";
             this.Zvrst.ReadOnly = true;
-            // 
-            // Lokacija
-            // 
-            this.Lokacija.HeaderText = "Lokacija";
-            this.Lokacija.Name = "Lokacija";
-            this.Lokacija.ReadOnly = true;
             // 
             // Kraj
             // 
@@ -170,7 +162,6 @@ namespace predstave
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ime;
         private System.Windows.Forms.DataGridViewTextBoxColumn Zvrst;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Lokacija;
         private System.Windows.Forms.DataGridViewTextBoxColumn Kraj;
         private System.Windows.Forms.DataGridViewTextBoxColumn ocena;
     }

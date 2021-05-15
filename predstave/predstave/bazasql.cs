@@ -326,5 +326,30 @@ namespace predstave
 
             }
         }
+        public List<predstava> izpisuserocene(int idu)
+        {
+            List<predstava> predstave = new List<predstava>();
+            using (NpgsqlConnection con = new NpgsqlConnection(connect))
+            {
+                con.Open();
+
+                NpgsqlCommand com = new NpgsqlCommand("SELECT * FROM izpisocenjenihuporanik(" + idu + ")  ", con);
+                NpgsqlDataReader reader = com.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    
+                    string Ime = reader.GetString(0);
+                    string Zvrst = reader.GetString(1);
+                    string Lokacija = reader.GetString(2);
+                    string Kraj = reader.GetString(3);
+                    int ocena = reader.GetInt32(4);
+                    predstava nova = new predstava( Ime, Zvrst, Lokacija, Kraj, ocena);
+                    predstave.Add(nova);
+                }
+                con.Close();
+                return predstave;
+            }
+        }
     }
 }
