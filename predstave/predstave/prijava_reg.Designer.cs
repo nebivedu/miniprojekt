@@ -1,7 +1,7 @@
 ﻿
 namespace predstave
 {
-    partial class Form2
+    partial class prijava_reg
     {
         /// <summary>
         /// Required designer variable.

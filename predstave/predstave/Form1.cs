@@ -14,12 +14,16 @@ namespace predstave
 {
     public partial class Form1 : Form
     {
-        public int idu = 0;
-        public int prijavlen = 0;
-        public Form1()
+        public int Idu = 0;
+        public int Prijavlen = 0;
+        public Form1(int idu, int prijavlen)
         {
             InitializeComponent();
+            Idu = idu;
+            Prijavlen = prijavlen;
         }
+
+        
 
         BazaConn baza = new BazaConn();
         string connect = BazaConn.connect();
@@ -91,7 +95,7 @@ namespace predstave
         private void button1_Click(object sender, EventArgs e)
         {
             
-            Form2 form2 = new Form2(idu,prijavlen);
+            prijava_reg form2 = new prijava_reg(Idu,Prijavlen);
             
             form2.Show();
             

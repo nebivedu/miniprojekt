@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace predstave
 {
-    public partial class Form2 : Form
+    public partial class prijava_reg : Form
     {
         int Idu = 0;
         int Prijavlen = 0;
-        public Form2(int idu,int prijavlen)
+        public prijava_reg(int idu,int prijavlen)
         {
             InitializeComponent();
             Idu = idu;
@@ -28,7 +28,7 @@ namespace predstave
 
         private void button1_Click(object sender, EventArgs e)
         {
-            registracija form3 = new registracija();
+            registracija form3 = new registracija(Idu, Prijavlen);
             this.Close();
             form3.Show();
 

@@ -113,5 +113,26 @@ namespace predstave
                 return predstave;
             }
         }
+        public List<uporabnik> iduporabnika(string email,string geslo)
+        {
+            List<uporabnik> uporabnik = new List<uporabnik>();
+            using (NpgsqlConnection con = new NpgsqlConnection(connect))
+            {
+                con.Open();
+
+                NpgsqlCommand com = new NpgsqlCommand("SELECT iduporabnika('"+email+"','"+geslo+"') ", con);
+                NpgsqlDataReader reader = com.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    int Id = reader.GetInt32(0);
+
+                    uporabnik nova = new uporabnik(Id);
+                    uporabnik.Add(nova);
+                }
+                con.Close();
+                return uporabnik;
+            }
+        }
     }
 }
