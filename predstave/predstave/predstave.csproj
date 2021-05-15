@@ -83,6 +83,12 @@
   <ItemGroup>
     <Compile Include="baza.cs" />
     <Compile Include="bazasql.cs" />
+    <Compile Include="Dodajpredstavo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dodajpredstavo.Designer.cs">
+      <DependentUpon>Dodajpredstavo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +129,9 @@
     <Compile Include="vec.Designer.cs">
       <DependentUpon>vec.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Dodajpredstavo.resx">
+      <DependentUpon>Dodajpredstavo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

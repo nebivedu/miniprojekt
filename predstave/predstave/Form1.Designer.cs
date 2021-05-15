@@ -33,8 +33,6 @@ namespace predstave
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.datapredstave = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Zvrst = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,9 +41,12 @@ namespace predstave
             this.Lokacija = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Kraj = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vec = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.datapredstave)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,9 +67,9 @@ namespace predstave
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(1064, 12);
+            this.button1.Location = new System.Drawing.Point(1053, 12);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(86, 38);
             this.button1.TabIndex = 3;
             this.button1.Text = "Profil";
             this.button1.UseVisualStyleBackColor = true;
@@ -95,25 +96,6 @@ namespace predstave
             this.datapredstave.Size = new System.Drawing.Size(1151, 432);
             this.datapredstave.TabIndex = 5;
             this.datapredstave.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 25);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Predstave";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(829, 59);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 13);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Uredi po kraju";
             // 
             // Id
             // 
@@ -164,6 +146,25 @@ namespace predstave
             this.vec.Name = "vec";
             this.vec.ReadOnly = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(109, 25);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Predstave";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(829, 59);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(73, 13);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Uredi po kraju";
+            // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(25, 75);
@@ -191,11 +192,22 @@ namespace predstave
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(1053, 59);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(86, 38);
+            this.button4.TabIndex = 11;
+            this.button4.Text = "Dodaj predstavo";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1151, 544);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.textBox1);
@@ -232,6 +244,7 @@ namespace predstave
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
     }
 }
 

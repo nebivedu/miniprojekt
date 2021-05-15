@@ -90,6 +90,26 @@ namespace predstave
             lol();
             imep();
             formload();
+            button4.Visible = false;
+            if (Prijavlen > 0)
+            {
+                button4.Visible = true;
+                bazasql Baza = new bazasql();
+                int lol = Baza.admin(Idu);
+                //MessageBox.Show(lol.ToString());
+                if (lol > 0)
+                {
+                    button4.Enabled = true;
+                }
+                else
+                {
+                    button4.Enabled = false;
+                }
+            }
+            else
+            {
+
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -173,6 +193,12 @@ namespace predstave
             {
                 datapredstave.Rows.Add(new object[] { i.Id, i.Ime, i.Zvrst, i.Datum, i.Opis, i.Lokacija, i.Kraj, "Več" });
             }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Dodajpredstavo pod = new Dodajpredstavo();
+            pod.ShowDialog();
         }
     }
 }
