@@ -43,6 +43,7 @@ namespace predstave
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.textBox5 = new System.Windows.Forms.TextBox();
+            this.ocena = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Ime
@@ -169,11 +170,22 @@ namespace predstave
             this.textBox5.Size = new System.Drawing.Size(120, 20);
             this.textBox5.TabIndex = 13;
             // 
+            // ocena
+            // 
+            this.ocena.AutoSize = true;
+            this.ocena.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ocena.Location = new System.Drawing.Point(47, 419);
+            this.ocena.Name = "ocena";
+            this.ocena.Size = new System.Drawing.Size(79, 29);
+            this.ocena.TabIndex = 14;
+            this.ocena.Text = "label6";
+            // 
             // vec
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1231, 619);
+            this.Controls.Add(this.ocena);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.textBox4);
@@ -212,5 +224,6 @@ namespace predstave
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label ocena;
     }
 }

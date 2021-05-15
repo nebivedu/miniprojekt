@@ -43,7 +43,7 @@ namespace predstave
             {
                 con.Open();
 
-                NpgsqlCommand com = new NpgsqlCommand("SELECT * FROM izpisPredstavid("+id+") ", con);
+                NpgsqlCommand com = new NpgsqlCommand("SELECT * FROM izpisPredstavid1("+id+") ", con);
                 NpgsqlDataReader reader = com.ExecuteReader();
                 while (reader.Read())
                 {
@@ -54,7 +54,8 @@ namespace predstave
                     string Opis = reader.GetString(4);
                     string Lokacija = reader.GetString(5);
                     string Kraj = reader.GetString(6);
-                    predstava nova = new predstava(Id, Ime, Zvrst, Datum, Opis, Lokacija,Kraj);
+                    int Ocena = reader.GetInt32(7);
+                    predstava nova = new predstava(Id, Ime, Zvrst, Datum, Opis, Lokacija,Kraj,Ocena);
                     predstave.Add(nova);
                 }
                 con.Close();

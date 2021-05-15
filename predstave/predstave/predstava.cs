@@ -16,6 +16,7 @@ namespace predstave
         public string Lokacija { get; set; }
 
         public string Kraj { get; set; }
+        public int Ocena { get; set; }
 
 
         public predstava()
@@ -52,7 +53,20 @@ namespace predstave
 
 
         }
+        public predstava(int id, string ime, string zvrst, string datum, string opis, string lokacija, string kraj,int ocena)
+        {
 
+            Id = id;
+            Ime = ime;
+            Zvrst = zvrst;
+            Datum = datum;
+            Opis = opis;
+            Lokacija = lokacija;
+            Kraj = kraj;
+            Ocena = ocena;
+
+
+        }
         public override string ToString()
         {
             string vstring = Id + Ime + Zvrst + Datum + Opis + Lokacija;

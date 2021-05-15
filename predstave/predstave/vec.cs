@@ -45,6 +45,7 @@ namespace predstave
                 Opis.Text = i.Datum;
                 Lokacija.Text = i.Lokacija;
                 Kraj.Text = i.Kraj;
+                ocena.Text="Ocena "+i.Ocena+"/5";
             }
         }
 
