@@ -136,7 +136,7 @@ namespace predstave
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             string kraj = comboBox1.SelectedItem.ToString();
-            MessageBox.Show(kraj);
+            //MessageBox.Show(kraj);
             datapredstave.Rows.Clear();
             bazasql Baza = new bazasql();
             List<predstava> predstava = Baza.krajpredstave(kraj);

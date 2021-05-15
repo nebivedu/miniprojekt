@@ -165,5 +165,26 @@ namespace predstave
 
             }
         }
+        public List<uporabnik> emailuporabnika(int idu)
+        {
+            List<uporabnik> uporabnik = new List<uporabnik>();
+            using (NpgsqlConnection con = new NpgsqlConnection(connect))
+            {
+                con.Open();
+
+                NpgsqlCommand com = new NpgsqlCommand("SELECT * FROM emailselect("+idu+") ", con);
+                NpgsqlDataReader reader = com.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    string Email = reader.GetString(0);
+
+                    uporabnik nova = new uporabnik(Email);
+                    uporabnik.Add(nova);
+                }
+                con.Close();
+                return uporabnik;
+            }
+        }
     }
 }

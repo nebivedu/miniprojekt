@@ -23,6 +23,14 @@ namespace predstave
             Id = id;
 
         }
+        public uporabnik( string email)
+        {
+
+           
+            Email = email;
+           
+
+        }
         public uporabnik(int id, string email, string geslo, int admin)
         {
 

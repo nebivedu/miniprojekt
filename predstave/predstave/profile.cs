@@ -23,6 +23,18 @@ namespace predstave
 
         private void profile_Load(object sender, EventArgs e)
         {
+            bazasql Baza = new bazasql();
+            List<uporabnik> upobnik= Baza.emailuporabnika(Idu);
+            foreach (uporabnik i in upobnik)
+            {
+
+                label2.Text = i.Email;
+
+            }
+        }
+        
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
 
         }
     }
