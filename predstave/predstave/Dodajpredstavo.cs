@@ -46,6 +46,11 @@ namespace predstave
 
         private void button1_Click(object sender, EventArgs e)
         {
+            string kraj = comboBox1.SelectedItem.ToString();
+            bazasql Baza = new bazasql();
+            Baza.Insertlokacije(lokacija.Text, kraj);
+            Baza.Insertpredstave(ime.Text, zvrst.Text, datum.Text, richTextBox1.Text, lokacija.Text, kraj);
+
 
         }
     }

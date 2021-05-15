@@ -223,5 +223,37 @@ namespace predstave
                 return uporabnik;
             }
         }
+        public void Insertlokacije(string ime, string kraj)
+        {
+
+            using (NpgsqlConnection con = new NpgsqlConnection(connect))
+            {
+                con.Open();
+
+                NpgsqlCommand com = new NpgsqlCommand("SELECT * FROM  Dodajlokacijo('" + ime + "','" + kraj + "')", con);
+                com.ExecuteNonQuery();
+
+
+
+                con.Close();
+
+            }
+        }
+        public void Insertpredstave(string ime, string zvrst, string datum, string opis, string lokacija,string kraj)
+        {
+
+            using (NpgsqlConnection con = new NpgsqlConnection(connect))
+            {
+                con.Open();
+
+                NpgsqlCommand com = new NpgsqlCommand("SELECT * FROM  Dodajpredstavo('" + ime + "', '" + zvrst + "', '" + datum + "', '" + opis + "', '" + lokacija + "',' " + kraj + "')", con);
+                com.ExecuteNonQuery();
+
+
+
+                con.Close();
+
+            }
+        }
     }
 }
