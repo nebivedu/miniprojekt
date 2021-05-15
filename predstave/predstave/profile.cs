@@ -62,5 +62,12 @@ namespace predstave
             this.Close();
             form2.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form1 form2 = new Form1(Idu, Prijavlen);
+            this.Close();
+            form2.Show();
+        }
     }
 }

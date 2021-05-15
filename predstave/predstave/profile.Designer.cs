@@ -39,12 +39,14 @@ namespace predstave
             this.Zvrst = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Kraj = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ocena = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datapredstave)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.datapredstave);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.label2);
@@ -136,6 +138,16 @@ namespace predstave
             this.ocena.Name = "ocena";
             this.ocena.ReadOnly = true;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(18, 153);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 7;
+            this.button2.Text = "Nazaj";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // profile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -164,5 +176,6 @@ namespace predstave
         private System.Windows.Forms.DataGridViewTextBoxColumn Zvrst;
         private System.Windows.Forms.DataGridViewTextBoxColumn Kraj;
         private System.Windows.Forms.DataGridViewTextBoxColumn ocena;
+        private System.Windows.Forms.Button button2;
     }
 }
