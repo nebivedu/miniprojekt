@@ -164,3 +164,12 @@ begin
     WHERE u.id=idu;
 
 end;$$
+
+CREATE OR REPLACE FUNCTION Updatepredstave(idp int,imep varchar,zvrstp varchar,datump varchar,opisp varchar) 
+RETURNS void AS $$ DECLARE
+
+BEGIN
+
+UPDATE predstave SET ime=imep,zvrst=zvrstp,datum=datump,opis=opisp  WHERE id = idp;
+
+END; $$ LANGUAGE 'plpgsql';
