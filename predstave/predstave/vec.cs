@@ -29,7 +29,7 @@ namespace predstave
             foreach (predstava i in ocena1)
             {
 
-                ocenalabel.Text ="Ocena: "+ i.Id.ToString();
+                ocenalabel.Text ="Povprečna ocena: "+ i.Id.ToString();
 
             }
         }

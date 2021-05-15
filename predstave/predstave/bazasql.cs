@@ -263,7 +263,7 @@ namespace predstave
             {
                 con.Open();
 
-                NpgsqlCommand com = new NpgsqlCommand("SELECT * FROM ocenafilma1(" +id+ ") ", con);
+                NpgsqlCommand com = new NpgsqlCommand("SELECT * FROM ocenafilma3(" +id+ ") ", con);
                 NpgsqlDataReader reader = com.ExecuteReader();
 
                 while (reader.Read())
