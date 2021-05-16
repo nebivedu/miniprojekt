@@ -1,5 +1,9 @@
 # miniprojekt
+KRATEK OPIS APLIKACIJE: Aplikacija je namenjena predstavam v Velenju. Uporabnik se lahko registrira ali prijavi. Admin lahko dodaja predstave spreminja podatke o predstavi ali pa jo izbriše vsak uporabnik pa lahko oceni predstavo ki pa se tudi pokaze na njegovem profilu katere predstae je že ocenil.
 
+
+
+STREŽNIŠKI PODPROGRAMI
 
 create or replace function izpisPredstavfinale() 
 	returns table (
